@@ -24,55 +24,60 @@ This activity is a single interactive app — no coding required. Everyone in th
 **same fixed items and the same fixed genetic algorithm run** (the "randomness" is seeded, so it
 produces identical results every time), so your results should match your classmates' exactly.
 
-**App link:** https://uam-aiclass-a9.streamlit.app/
-
-If you'd rather run it on your own machine instead of using the shared link, see
-**Running It Yourself** below.
-
-### The App
-
-The app has two tabs:
-
-1. **🧳 The Packing Problem** — the 8 candidate items, the weight limit, and a glossary of
-   genetic algorithm vocabulary (chromosome, gene, population, fitness, generation, selection,
-   crossover, mutation) mapped onto this specific problem.
-2. **🧬 Run the Genetic Algorithm** — click through 12 generations, one at a time, watching the
-   population's fitness values evolve, and finally compare the algorithm's best-ever answer
-   against the true optimal packing (found by checking all 256 possible combinations).
 
 ### Your Tasks
 
-No programming background is required — just follow each step and use the hints if you get stuck.
 
 1. **Read the Packing Problem tab.** Note the 8 items, the weight limit, and the vocabulary
    table.
-   💡 *Hint:* You don't need to memorize the vocabulary — you'll see each term in action in the
-   next tab.
+   <img width="625" height="293" alt="image" src="https://github.com/user-attachments/assets/4886578e-8dfb-4e2d-9b34-666fae819acb" />
 
+- Weight limit: 8 kg
+- Number of items: 8
+- Vocabulary: chromosome, gene, population, fitness, generation, selection, crossover, mutation.
+
+---
 2. **Step through all 12 generations in the Run the Genetic Algorithm tab, one click at a
-   time.** Take a screenshot of Generation 1, and another of the generation where "Best-ever"
-   first reaches its final value.
-   💡 *Hint:* Watch the "Best in Generation" number — it doesn't always go up! That's expected:
-   this is a **non-elitist** algorithm, so a good solution can disappear from the population in
-   a later generation. That's exactly why "Best-ever" is tracked separately.
+   time.**
+   
+- STEP 1
+<img width="605" height="374" alt="image" src="https://github.com/user-attachments/assets/e49e9368-c636-481e-b18f-e6d4cdfedfbc" />
+   
+- STEP 2
+<img width="628" height="359" alt="image" src="https://github.com/user-attachments/assets/67a56854-8db0-4149-b9b0-c4d44ddce267" />
 
-3. **Take a screenshot of the Final Result**, showing whether the algorithm found the true
-   optimal packing.
+- STEP 3
+<img width="622" height="355" alt="image" src="https://github.com/user-attachments/assets/0c37620e-7e6f-4c22-b309-43700d93d419" />
 
-4. **Fill out `A9_ReflectionQuestions.md`**, using the exact data from your run, and submit it
-   along with your labeled screenshots.
+- STEP 4
+<img width="622" height="358" alt="image" src="https://github.com/user-attachments/assets/a2b0835f-c920-458d-afc2-7374c0f97c74" />
 
-### Running It Yourself (optional)
+- STEP 5
+<img width="626" height="358" alt="image" src="https://github.com/user-attachments/assets/6360b599-b2d1-42a0-9853-26d843e0519b" />
 
-If you already completed Activity 2's setup and prefer to run this locally instead of using the
-shared link:
+- STEP 6
+<img width="628" height="365" alt="image" src="https://github.com/user-attachments/assets/3fc4a20c-1730-4fbd-a4b6-22e3e5bf9ab4" />
 
-```bash
-conda activate ai_uam
-cd Activity9
-pip install -r requirements.txt
-streamlit run app.py
-```
+- STEP 7
+<img width="620" height="353" alt="image" src="https://github.com/user-attachments/assets/40a7aadb-0406-40e5-8714-d3121236f069" />
+
+- STEP 8
+<img width="625" height="357" alt="image" src="https://github.com/user-attachments/assets/2dfdf779-11c1-40e3-b841-0547568759bf" />
+
+- STEP 9
+<img width="622" height="368" alt="image" src="https://github.com/user-attachments/assets/8facbdfe-01af-46ac-8214-990a4546b79f" />
+
+- STEP 10
+<img width="626" height="365" alt="image" src="https://github.com/user-attachments/assets/06f57204-7d28-49ec-955f-31b7f3b36186" />
+
+- STEP 11
+<img width="631" height="364" alt="image" src="https://github.com/user-attachments/assets/3be50e15-60a2-4c81-b56e-8c3759809558" />
+
+
+---   
+3. **Take a screenshot of the Final Result**
+<img width="617" height="515" alt="image" src="https://github.com/user-attachments/assets/fdf49d9f-57b5-4749-bc20-911cd4c11b2c" />
+
 
 # References:
 - [Streamlit documentation](https://docs.streamlit.io/)
