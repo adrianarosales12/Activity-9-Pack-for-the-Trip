@@ -2,29 +2,29 @@
 
 ---
 
-1. What is the bag's weight limit, and how many total possible packing combinations exist for
-   8 items?
+1. What is the bag's weight limit, and how many total possible packing combinations exist for 8 items?
+The carry-on bag has a strict weight limit of 8 kg. Since there are 8 items to choose from, each item can either be included or excluded, giving us 28=256 possible packing combinations. This illustrates the combinatorial explosion of the knapsack problem: even with a small number of items, the number of possible solutions grows exponentially, making brute-force evaluation increasingly impractical in larger scenarios.
 
-2. What is the **true optimal packing** (list the items) and its total value, according to the
-   brute-force check?
+---
+2. What is the **true optimal packing** (list the items) and its total value, according to the brute-force check?
+The brute-force check across all 256 combinations confirms that the true optimal packing is:
+Laptop, Charger, Camera, Client Gift with a total usefulness value of 29. This represents the absolute best solution under the weight constraint, serving as the benchmark against which the genetic algorithm’s performance is measured.
 
-3. What is **Generation 1's** best-in-generation fitness, and which items does that packing
-   plan contain?
+---
+3. What is **Generation 1's** best-in-generation fitness, and which items does that packing plan contain?
+In Generation 1, the best solution achieved a fitness value of 24, with the items:
+Laptop, Camera, Client Gift This shows that even in the initial random population, feasible and relatively strong solutions can emerge. However, it was not yet the optimal solution, highlighting the importance of iterative improvement through genetic operations.
 
-4. At which generation does **"Best-ever"** first reach its final value, and what is that
-   value?
+---
+4. At which generation does **"Best-ever"** first reach its final value, and what is that value?
+The Best-ever fitness value reached its final maximum of 29 in Generation 6. This indicates that by the sixth generation, the algorithm successfully evolved a solution that matched the true optimal packing. From that point onward, “Best-ever” preserved this result, even if later generations temporarily produced weaker solutions.
 
-5. Did the Genetic Algorithm find the true optimal packing? If yes, say at which generation it
-   was first found; if no, report the exact gap between the algorithm's best-ever value and the
-   true optimum.
 
-6. Find one generation where **"Best in Generation"** is *lower* than **"Best-ever."** Name that
-   generation, and explain in one sentence why that's possible for this particular kind of
-   genetic algorithm (non-elitist).
+5. Did the Genetic Algorithm find the true optimal packing? If yes, say at which generation it was first found; if no, report the exact gap between the algorithm's best-ever value and the true optimum.
 
-7. In your own words, explain what **crossover** and **mutation** each contribute to a genetic
-   algorithm's ability to find good solutions, using this packing problem as your example.
+6. Find one generation where **"Best in Generation"** is *lower* than **"Best-ever."** Name that generation, and explain in one sentence why that's possible for this particular kind of
+genetic algorithm (non-elitist).
 
-8. Name one **real business, IT, or design scenario** (other than packing a suitcase) where a
-   genetic algorithm would be useful instead of just checking every possible option by brute
-   force. Briefly explain why brute force wouldn't work well there.
+7. In your own words, explain what **crossover** and **mutation** each contribute to a genetic algorithm's ability to find good solutions, using this packing problem as your example.
+
+8. Name one **real business, IT, or design scenario** (other than packing a suitcase) where a genetic algorithm would be useful instead of just checking every possible option by brute force. Briefly explain why brute force wouldn't work well there.
