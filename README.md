@@ -5,7 +5,7 @@
 ## Delivery Format: [] Video URL | [X] Markdown file | [] Jupyter Notebook file
 
 ---
-.
+
 # Activity Description
 ## The Story
 
@@ -78,7 +78,53 @@ produces identical results every time), so your results should match your classm
 3. **Take a screenshot of the Final Result**
 <img width="617" height="515" alt="image" src="https://github.com/user-attachments/assets/fdf49d9f-57b5-4749-bc20-911cd4c11b2c" />
 
-
+---
 # References:
 - [Streamlit documentation](https://docs.streamlit.io/)
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
+
+
+
+---
+
+## Activity 9 — Reflection Questions: Pack for the Trip
+
+**1. What is the bag's weight limit, and how many total possible packing combinations exist for 8 items?**
+   - The carry-on bag has a strict weight limit of 8 kg. Since there are 8 items to choose from, each item can either be included or excluded, giving us 28=256 possible packing combinations. This illustrates the combinatorial explosion of the knapsack problem: even with a small number of items, the number of possible solutions grows exponentially, making brute-force evaluation increasingly impractical in larger scenarios. 
+
+
+**2. What is the **true optimal packing** (list the items) and its total value, according to the brute-force check?**
+   - The brute-force check across all 256 combinations confirms that the true optimal packing is:
+      - Laptop, Charger, Camera, Client Gift with a total usefulness value of 29. This represents the absolute best solution under the weight constraint, serving as the benchmark against which the genetic algorithm’s performance is measured.
+
+**3. What is **Generation 1's** best-in-generation fitness, and which items does that packing plan contain?**
+   - In Generation 1, the best solution achieved a fitness value of 24, with the items:
+Laptop, Camera, Client Gift This shows that even in the initial random population, feasible and relatively strong solutions can emerge. However, it was not yet the optimal solution, highlighting the importance of iterative improvement through genetic operations.
+
+
+**4. At which generation does **"Best-ever"** first reach its final value, and what is that   value?**
+   - The Best-ever fitness value reached its final maximum of 29 in Generation 6. This indicates that by the sixth generation, the algorithm successfully evolved a solution that matched the true optimal packing. From that point onward, “Best-ever” preserved this result, even if later generations temporarily produced weaker solutions.
+
+**5. Did the Genetic Algorithm find the true optimal packing? If yes, say at which generation it was first found; if no, report the exact gap between the algorithm's best-ever value and the true optimum.**
+    - Yes, the genetic algorithm did find the true optimal packing.
+   -  It was first discovered in Generation 6, with the items Laptop, Charger, Camera, and Client Gift. This demonstrates that the algorithm’s evolutionary process was effective in converging toward the best possible solution within a limited number of generations.
+
+
+**6. Find one generation where **"Best in Generation"** is *lower* than **"Best-ever."** Name that generation, and explain in one sentence why that's possible for this particular kind of genetic algorithm (non-elitist).**
+
+- An example occurs in Generation 9:
+   - Best in Generation: 26 (Laptop, Umbrella, Camera, Client Gift)
+   - Best-ever: 29 (Laptop, Charger, Camera, Client Gift) This discrepancy happens because the algorithm is non-elitist, meaning it does not guarantee that the best solution from one generation will survive into the next. As a result, weaker solutions can dominate temporarily, but “Best-ever” ensures that the highest fitness found so far is never lost.
+
+
+**7. In your own words, explain what **crossover** and **mutation** each contribute to a genetic algorithm's ability to find good solutions, using this packing problem as your example.**
+   - Crossover: This operation combines parts of two parent solutions to create new offspring. In the packing problem, it allows useful traits from different solutions to merge — for example, one parent with Laptop + Client Gift and another with Camera + Charger could produce a child solution containing all four items. This accelerates the search for high-value combinations.
+   - Mutation: Mutation introduces random changes, such as flipping the inclusion of an item. For instance, a plan might suddenly add Snacks or remove the Umbrella. Mutation prevents the population from stagnating and helps explore new areas of the solution space, ensuring diversity and avoiding local optima.
+
+
+**8. Name one **real business, IT, or design scenario** (other than packing a suitcase) where a genetic algorithm would be useful instead of just checking every possible option by brute force. Briefly explain why brute force wouldn't work well there.**
+
+   - A practical example is feature selection in software product development. Companies often face dozens of potential features to implement, each with different costs and benefits. Brute-force evaluation of all possible feature sets would be computationally impossible due to the sheer number of combinations. A genetic algorithm, however, can evolve promising sets of features that maximize user value while respecting budget and time constraints. Just like packing the suitcase, the algorithm balances usefulness against limited resources.
+
+
+   
